@@ -1,15 +1,15 @@
 
-HCLAB_USER='hclab'
-HCLAB_PASS='hclab'
-HCLAB_HOST='localhost/hclab'
+HCLAB_USER=''
+HCLAB_PASS=''
+HCLAB_HOST=''
 
-EMAIL_HOST='outlook.office365.com'
+EMAIL_HOST=''
 EMAIL_PORT=587
-EMAIL_NAME='Laboratorium Siloam Hospital Asri'
-EMAIL_ADDRESS='laboratorium.shasri@siloamhospitals.com'
-EMAIL_PASSWORD='@Siloam2022'
+EMAIL_NAME=''
+EMAIL_ADDRESS=''
+EMAIL_PASSWORD=''
 
-PDF_PATH='d:\\hcini\\pdf'
-PDF_ENCRYPT='d:\\hcini\\pdf\\encrypt'
-PDF_BACKUP='d:\\hcini\\pdf\\temp_pdf'
+PDF_PATH=''
+PDF_ENCRYPT=''
+PDF_BACKUP=''
 
