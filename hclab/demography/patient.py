@@ -60,11 +60,11 @@ class Patient:
         
         return '0'
 
-    def birth_date(self)->str:
+    def birth_date(self, date_format:str='ddmmyy')->str:
         """Get patient birth_date data"""
 
         query = "select to_char(oh_bod,'ddmmyy') from ord_hdrwhere oh_tno = :lno"
-        stmt = {'lno' : self.__lno}
+        stmt = {'lno' : self.__lno, 'date_format' : date_format}
 
         with self.__conn:
             self.__conn.cursor.execute(query, stmt)

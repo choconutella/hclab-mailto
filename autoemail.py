@@ -55,22 +55,6 @@ class AutoMail:
             lno = os.path.splitext(filename)[0].split('_')[3]
             patname = os.path.splitext(filename)[0].split('_')[1]
 
-            # assign default value of variables
-            email = ''
-            birth_dt = ''
-            is_repetitive = False
-            is_valid = False
-            msg = ''
-
-            self.__label.config(text=f"Processing {lno}")
-            print(f"""
-------- BEGIN -------
-Processing....
-File = {file}
-To   = {patient.email}
--------  END  -------
-            """)
-
             # get patient data
             try:
               patient = Patient(self.__conn, lno)
@@ -87,6 +71,19 @@ To   = {patient.email}
               print(e)
               continue
 
+            self.__label.config(text=f"Processing {lno}")
+            print(f"""
+------- BEGIN -------
+Processing....
+File = {file}
+To   = {patient.email}
+-------  END  -------
+            """)
+
+            # assign default value of variables
+            email = patient.email()
+            password = patient.birth_date()
+
             # validating
             if email != '' and email is not None and email.lower() != 'noemail@none.com' and email.lower() != 'tidaktercantum@none.com':
               
@@ -101,7 +98,7 @@ To   = {patient.email}
                 # send email here
                 subject = 'Hasil Laboratorium ' + patname
                 try:
-                  self.__send(email, file, birth_dt, lno, subject)
+                  self.__send(email, file, password, lno, subject)
                   validator.save_log(email, 'SENT', msg)
                 except Exception as e:
                   logging.error(e)

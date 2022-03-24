@@ -5,3 +5,4 @@ dist/
 hclab/__pycache__/
 test.py
 application.py
+logs/

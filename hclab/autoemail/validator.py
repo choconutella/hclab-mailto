@@ -1,5 +1,3 @@
-
-
 class Validator:
 
     def __init__(self, conn:object, lno:str):

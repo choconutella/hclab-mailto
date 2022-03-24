@@ -8,7 +8,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 VERSION = '1.1.0'
-DESCRIPTION = 'Python for HCLAB'
+DESCRIPTION = 'HCLAB Auto-email'
 
 # Setting up
 setup(
@@ -20,7 +20,7 @@ setup(
     long_description_content_type="text/markdown",
     packages=find_packages(),
     install_requires=['cx_Oracle', 'PyPDF2'],
-    keywords=['python', 'hclab', 'email', 'auto email', 'uploader', 'bridging'],
+    keywords=['python', 'hclab', 'email', 'auto email'],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
