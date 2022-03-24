@@ -12,7 +12,7 @@ DESCRIPTION = 'HCLAB Auto-email'
 
 # Setting up
 setup(
-    name="hclab-python",
+    name="hclab-mailto",
     version=VERSION,
     author="ANO (Adhil Novandri)",
     author_email="<adhil.nvndr@gmail.com>",
